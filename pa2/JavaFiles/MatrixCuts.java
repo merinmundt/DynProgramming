@@ -22,8 +22,11 @@ public class MatrixCuts{
     	minCost.add(curr);
     	
     	for(int j = 0; j < M.length(); j++) {
+    		//need to check if valid**
     		int min = M[curr.x +1][curr.y-1];
+    		//need to check if valid**
     		int min2 = M[curr.x+1][curr.y];
+    		//need to check if valid**
     		int min3 = M[curr.x+1][curr.y+1];
     		if(min < min2) {
     			if(min < min3) {
@@ -45,6 +48,10 @@ public class MatrixCuts{
     				curr.y = curr.y+1;
     			}
     		}
+    		minCost.add(curr)
+    		
+    		//check if at the bottom row, and not at the end corner
+    		
     	}
     	
     }
