@@ -1,7 +1,10 @@
 package pa2;
 
 import java.awt.Color;
+
 import java.util.*;
+import Tuple;
+import MatrixCuts;
 
 
 /*

@@ -1,11 +1,12 @@
 package pa2;
 
+
 public class Tuple {
 	
 	private int x, y;
 	
 	
-	Public Tuple() {
+	public Tuple() {
 		x = 0;
 		y = 0;
 	}
