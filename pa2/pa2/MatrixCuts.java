@@ -20,7 +20,7 @@ public class MatrixCuts{
     	
     	
     	
-    	//all of this is before I actually knewwhat I was doing. 
+    	//all of this is before I actually knew what I was doing. 
     	int cost = 0;
     	int lowest = M[0][0];
     	//Tuple curr = new Tuple(0,0);
@@ -104,6 +104,26 @@ public class MatrixCuts{
     }
     	
     static ArrayList<Tuple> stitchCut(int[][] M){
-
+    	ArrayList<Tuple> minCost = new ArrayList<Tuple>();
+    	int cost = 0;
+    	minCost.add(new Tuple(0,0));
+    	cost = cost + M[0][0];
+    	int worstCase = M.length * M[M.length].length;
+    	for (int i = 0; i < worstCase; i++) {
+    		int min = 0; 
+    		int min2 = 0;
+    		int min3 = 0;
+    	}
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	return minCost;
     }
 }
