@@ -22,12 +22,39 @@ public class MatrixCuts{
     	minCost.add(curr);
     	
     	for(int j = 0; j < M.length(); j++) {
+    		int min; 
+    		int min2;
+    		int min3;
+    		
     		//need to check if valid**
-    		int min = M[curr.x +1][curr.y-1];
+    		if((curr.y-1 >= 0) && (curr.x+1 <= M.length()-1)) {
+        		min = M[curr.x +1][curr.y-1];
+    		}
+    		else {
+    			//moving this way is not a valid move
+    			//therefore set min to be very very large
+    			min = 10000;
+    		}
     		//need to check if valid**
-    		int min2 = M[curr.x+1][curr.y];
+    		if(curr.x+1 <= M.length()-1) {
+    			min2 = M[curr.x+1][curr.y];
+    		}
+    		else {
+    			//moving this way is not a valid move
+    			//therefore set min to be very very large
+    			min2 = 10000;
+    		}
     		//need to check if valid**
-    		int min3 = M[curr.x+1][curr.y+1];
+    		if(curr.y+1 <= M[j].length()) {
+    			min3 = M[curr.x+1][curr.y+1];
+    		}
+    		else {
+    			//moving this way is not a valid move
+    			//therefore set min to be very very large
+    			min2 = 10000;
+    		}
+    		
+    		//finding the best move
     		if(min < min2) {
     			if(min < min3) {
     				curr.x = curr.x+1;
@@ -48,10 +75,13 @@ public class MatrixCuts{
     				curr.y = curr.y+1;
     			}
     		}
+    		
     		minCost.add(curr)
     		
     		//check if at the bottom row, and not at the end corner
-    		
+    		if((curr.x == M.length() - 1) && (curr.y != M[M.length()-1].length()-1){
+    			printf("unable to reach destination");
+    		}
     	}
     	
     }
