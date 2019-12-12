@@ -21,6 +21,7 @@ public class ImageProcessor{
         	//setting the pic to its new pic without the pixels that have been removed
         	for(int i = 0; i < minCost.size(); i++) {
         		for(int j = 0; j + 1 < pic.width(); j++) {
+        			
         			if(j < minCost.get(i).getY()) {
         				newPic.set(j, i, pic.get(j, i));
         			}
@@ -30,6 +31,7 @@ public class ImageProcessor{
         		}
         	}
         	pic = newPic;
+        	n++;
         }
         
         return pic;
