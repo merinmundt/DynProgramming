@@ -7,7 +7,7 @@ import java.util.Stack;
 import java.io.*;
 import java.util.*;
 
-
+//@author Merin Mundt
 public class MatrixCuts {
 
 
